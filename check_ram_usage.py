@@ -8,4 +8,4 @@ ram = \
 sorted([(x, sys.getsizeof(globals().get(x))) for x in dir() if not x.startswith('_') \
         and x not in sys.modules and x not in ipython_vars], key=lambda x: x[1], reverse=True)
 print(ram)
-print(total: np.sum([x[1] for x in ram])/1000000000) 
+print('total:', np.sum([x[1] for x in ram])/1000000000) 
