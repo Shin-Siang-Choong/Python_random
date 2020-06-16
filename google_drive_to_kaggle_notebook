@@ -1,0 +1,18 @@
+#keep Internet on
+
+fid = [ '1-9iRMa4q65kJ.....' ,
+         '2GgTvBTNaB' ,
+         '8wbKq' ,
+         'Y53i8P3bg' ,
+         '1-NMsg3B0' ] #Make sure to share the file "Any one with a link" , put the ids here 
+
+!pip install gdown > /dev/null
+import gdown
+
+for i in range(len(fid)):
+    file_id=fid[i] 
+    url = f'https://drive.google.com/uc?id={file_id}' 
+    output = 'model_' + str(i) + '.bin' 
+    gdown.download(url, output, quiet=False)
+
+!ls -l
